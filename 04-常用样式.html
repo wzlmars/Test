@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用样式</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+        标题
+            对h1~h6的标题效果进行了覆盖
+            提供了对应的类名，为非标题元素设置样式: .h1~.h6
+            副标题，small标签 或 .small类名
+    -->
+    <h1>标题1<small>副标题1</small></h1>
+    <h2>标题2<span class="small">副标题2</span></h2>
+    <h3>标题3</h3>
+    <div class="h1">你好</div>
+
+    <hr><br>
+
+    <!--
+        段落
+        <small>: 小号字
+        <b> or <strong>: 加粗
+        <i> or <em>: 斜体
+    -->
+    <p>Grok is a great way to parse unstructured log data into something structured and queryable.</p>
+    <p class="lead">Grok is a <small>great</small> way <b>to</b> parse <i>unstructured</i> log data into something structured and queryable.</p>
+
+    <hr><br>
+
+     <!--
+        强调
+        .text-muted: 提示
+        .text-primary: 主要
+        .text-success: 成功
+        .text-info: 通知信息
+        .text-warning: 警告
+        .text-danger: 危险
+    -->
+    <div>
+        <div class="text-muted">.text-muted: 提示</div>
+        <div class="text-primary">.text-primary: 主要</div>
+        <div class="text-success">.text-success: 成功</div>
+        <div class="text-info">.text-info: 通知信息</div>
+        <div class="text-warning">.text-warning: 警告</div>
+        <div class="text-danger">.text-danger: 危险</div>
+    </div>
+
+    <hr><br>
+
+    <!--
+        对齐
+    -->
+    <p class="text-left">测试bootstrap中的对齐样式效果</p>
+    <p class="text-right">测试bootstrap中的对齐样式效果</p>
+    <p class="text-center">测试bootstrap中的对齐样式效果</p>
+    <!--下面的是两端对齐，可以从下面两个示例中看到用与不用的区别-->
+    <p>
+        This is a volume-based attack in which an attacker targets random ports on a host with packets containing UDP datagrams. The target checks to establish these datagrams with an associated application. When no association is made, the target computer responds with “destination unreachable.” As more of these requests are received, the target system’s resources are overwhelmed and the system becomes unresponsive.
+    </p>
+    <p class="text-justify">
+        This is a volume-based attack in which an attacker targets random ports on a host with packets containing UDP datagrams. The target checks to establish these datagrams with an associated application. When no association is made, the target computer responds with “destination unreachable.” As more of these requests are received, the target system’s resources are overwhelmed and the system becomes unresponsive.
+    </p>
+
+    <hr><br>
+
+    <!--
+        列表
+        无序列表：<ul><li>...</li></ul>
+        有序列表：<ol><li>...</li></ol>
+        定义列表：<dl><dt>...<dt><dd>...</dd></dl>
+    -->
+    <ul>
+        <li>无序项目列表一</li>
+        <li>无序项目列表二</li>
+    </ul>
+    <ol>
+        <li>有序项目列表一</li>
+        <li>有序项目列表二</li>
+    </ol>
+    <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表是一种样式表语言</dd>
+    </dl>
+
+    <ul class="list-unstyled">
+        <li>去点项目列表一</li>
+        <li>去点项目列表二</li>
+    </ul>
+    <ul class="list-inline">
+        <li>首页</li>
+        <li>java学院</li>
+        <li>在线课堂</li>
+    </ul>
+    <dl class="dl-horizontal">
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS 层叠样式表是一种样式表语言层叠样式表是一种样式表语言</dt>
+        <dd>层叠样式表是一种样式表语言</dd>
+    </dl>
+
+    <hr><br>
+
+    <!--
+        代码
+        使用<code></code>显示单行内联代码
+        使用<pre></pre>来显示多行代码
+            样式：pre-scrollable (height, max-height高度固定为340px，超过出现滚动条)
+        使用<kbd></kbd>来显示用户输入代码，如快捷键
+    -->
+
+    <code>this is a simple code</code>
+    <div>按<kbd>ctrl</kbd> + <kbd>s</kbd>进行保存</div>
+    <!--
+        里面会保留原本的格式，包括空格，换行等，不需要用<br>特别指定换行
+        如果要显示HTML标签，而不是其效果，则如下：
+            <h1>你好<h2>: &lt;h1&gt;你好&lt;h2&gt;
+    -->
+    <pre>
+    第一行
+    第二行
+    第三行
+    </pre>
+    <pre class="pre-scrollable">
+    <ol>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+        <li>.....</li>
+    </ol>
+    </pre>
+
+    <hr><br>
+
+    <!--
+        表格
+        基础样式：.table
+        附加样式：
+            .table-striped: 斑马线表格
+            .table-bordered: 带边框的表格
+            .table-hover: 鼠标悬停高亮的表格
+            .table-condensed: 紧凑型表格，单元格没内距或者内距较其他表格的内距小
+        tr,th,td样式：
+            .active
+            .success
+            .info
+            .warning
+            .danger
+    -->
+    <table class="table table-bordered table-striped table-condensed table-hover">
+        <tr class="active">
+            <th>JavaSE</th>
+            <th>数据库</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr class="danger">
+            <td>面向对象</td>
+            <td>oracle</td>
+            <td>json</td>
+        </tr>
+        <tr class="success">
+            <td>数组</td>
+            <td>mysql</td>
+            <td>ajax</td>
+        </tr>
+    </table>
+
+    <hr><br>
+
+    <!--
+        表单
+        .form-control
+        .input-lg:  比较大
+        .input-sm:  比较小
+    -->
+    <input type="text" /><br>
+    <select>
+        <option>请选择城市</option>
+        <option>上海</option>
+        <option>北京</option>
+    </select><br>
+    <textarea></textarea>
+    <hr>
+    <!--文本框-->
+    <div class="row">
+        <div class="col-md-3">
+            <input class="form-control" type="text" /><br>
+            <input class="form-control input-lg" type="text" /><br>
+            <input class="form-control input-sm" type="text" /><br>
+        </div>
+    </div>
+    <!--下拉框-->
+    <div class="row">
+        <div class="col-md-3">
+            <select class="form-control input-sm">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>北京</option>
+            </select><br>
+            <select class="form-control input-sm" multiple="multiple">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>北京</option>
+            </select><br>
+        </div>
+    </div>
+    <!--文本域-->
+    <div class="row">
+        <div class="col-md-3">
+            <textarea class="form-control"></textarea>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <!--
+        单复选框
+    -->
+    <input type="checkbox" name="hobby" /> 唱歌
+    <input type="checkbox" name="hobby" /> 跳舞
+    <input type="radio" name="hobby" /> 男
+    <input type="radio" name="hobby" /> 女
+    <hr><br>
+    <!--复选框，垂直显示-->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="checkbox">
+                <label><input type="checkbox" name="hobby"> 唱歌</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="hobby"> 跳舞</label>
+            </div>
+        </div>
+    </div>
+    <!--复选框，水平显示-->
+    <div class="row">
+        <div class="col-md-3">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="hobby"> 唱歌
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="hobby"> 跳舞
+            </label>
+        </div>
+    </div>
+    <hr><br>
+    <!--单选框，垂直显示-->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="radio">
+                <label><input type="radio" name="hobby"> 唱歌</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="hobby"> 跳舞</label>
+            </div>
+        </div>
+    </div>
+    <!--单选框，水平显示-->
+    <div class="row">
+        <div class="col-md-3">
+            <label class="radio-inline">
+                <input type="radio" name="hobby"> 唱歌
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="hobby"> 跳舞
+            </label>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <!--
+        按钮：.btn
+        普通的a标签等也可以通过上面这个样式变成按钮的样式！！！
+    -->
+    <button>按钮</button>
+    <input type="button" value="按钮" />
+    <hr><br>
+    <button class="btn btn-danger">按钮</button>
+    <button class="btn btn-info">按钮</button>
+    <button class="btn btn-default">按钮</button>
+    <button class="btn btn-link">按钮</button>
+    <button class="btn btn-success">按钮</button>
+    <button class="btn btn-primary">按钮</button>
+    <button class="btn btn-warning">按钮</button>
+    <hr><br>
+    <!--通过样式设置非按钮元素也有按钮的效果-->
+    <a class="btn btn-info" href="#">这是一个a标签</a>
+    <span class="btn btn-success">这是一个span标签</span>
+    <div class="btn btn-primary">这是一个div标签</div>
+    <hr><br>
+    <!--设置按钮大小-->
+    <button class="btn btn-danger btn-lg">按钮</button>
+    <button class="btn btn-info btn-sm">按钮</button>
+    <button class="btn btn-default btn-xs">按钮</button>
+    <hr><br>
+    <!--禁用按钮-->
+    <!--真正禁用-->
+    <button disabled="disable" class="btn btn-info" onClick="alert('hello')">按钮</button>
+    <!--只是当鼠标放上去显示一个禁用的图标，但是如果点击还是可以生效-->
+    <button class="btn btn-primary disabled" onClick="alert('hello')">按钮</button>
+
+    <hr><br>
+
+    <!--
+        表单布局
+        1. <form>标签中添加role="form"
+        2. 下面的每行表单标签要放在一个<div>标签中，这个标签要添加一个样式：.form-group
+        3. 里面的表单，像上面所讲到的添加一个样式: .form-control 
+    -->
+    <!--垂直布局，适合注册，信息较多-->
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="username" class="control-label col-md-1">用户名:</label>
+            <div class="col-md-3">
+                <input id="username" class="form-control" type="text" name="user" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label col-md-1">密码:</label>
+            <div class="col-md-3">
+                    <input id="password" class="form-control" type="password" name="pwd" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label col-md-1">爱好:</label>
+            <div class="col-md-3">
+                <label class="radio-inline">
+                    <input type="radio" name="hobby"> 唱歌
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="hobby"> 跳舞
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3 col-md-offset-1">
+                <button class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </form>
+    <hr><br>
+    <!--水平布局，适合快捷登录，一般就用户名密码，然后登录即可-->
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <label for="username" class="control-label">用户名:</label>
+            <input id="username" class="form-control" type="text" name="user" />
+        </div>
+        <div class="form-group">
+            <label for="username" class="control-label">姓名:</label>
+            <input id="username" class="form-control" type="text" name="user" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default">提交</button>
+        </div>
+    </form>
+
+    <hr><br>
+
+    <!--
+        缩略图
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="img/yangmi.jpg" alt="...">
+                    <h3>杨幂</h3>
+                    <p>出生于北京市，中国内地女演员，模特</p>
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-heart"></span> 喜欢
+                    </button>
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-pencil"></span> 评论
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="img/yangmi.jpg" alt="...">
+                    <h3>杨幂</h3>
+                    <p>出生于北京市，中国内地女演员，模特</p>
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-heart"></span> 喜欢
+                    </button>
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-pencil"></span> 评论
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="img/yangmi.jpg" alt="...">
+                    <h3>杨幂</h3>
+                    <p>出生于北京市，中国内地女演员，模特</p>
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-heart"></span> 喜欢
+                    </button>
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-pencil"></span> 评论
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img src="img/yangmi.jpg" alt="...">
+                    <h3>杨幂</h3>
+                    <p>出生于北京市，中国内地女演员，模特</p>
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-heart"></span> 喜欢
+                    </button>
+                    <button class="btn btn-info">
+                        <span class="glyphicon glyphicon-pencil"></span> 评论
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr><br>
+
+    <!--
+        面板
+    -->
+    <div class="panel panel-warning">
+        <!--板块标题-->
+        <div class="panel-heading">
+            明星合集
+        </div>
+        <!--板块内容-->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/yangmi.jpg" alt="...">
+                        <h3>杨幂</h3>
+                        <p>出生于北京市，中国内地女演员，模特</p>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-heart"></span> 喜欢
+                        </button>
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-pencil"></span> 评论
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/yangmi.jpg" alt="...">
+                        <h3>杨幂</h3>
+                        <p>出生于北京市，中国内地女演员，模特</p>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-heart"></span> 喜欢
+                        </button>
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-pencil"></span> 评论
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/yangmi.jpg" alt="...">
+                        <h3>杨幂</h3>
+                        <p>出生于北京市，中国内地女演员，模特</p>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-heart"></span> 喜欢
+                        </button>
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-pencil"></span> 评论
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/yangmi.jpg" alt="...">
+                        <h3>杨幂</h3>
+                        <p>出生于北京市，中国内地女演员，模特</p>
+                        <button class="btn btn-default">
+                            <span class="glyphicon glyphicon-heart"></span> 喜欢
+                        </button>
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-pencil"></span> 评论
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

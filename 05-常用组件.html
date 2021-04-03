@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用组件</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--
+        导航
+    -->
+    <p>基本的胶囊式导航菜单</p>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">SVN</a></li>
+        <li><a href="#">iOS</a></li>
+        <li><a href="#">VB.Net</a></li>
+        <li><a href="#">Java</a></li>
+        <li><a href="#">PHP</a></li>
+    </ul>
+    <hr><br>
+    <p>面包屑式的导航菜单</p>
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">2013</a></li>
+        <li class="active">十一月</li>
+    </ul>
+
+    <hr><br>
+
+    <!--
+        下拉菜单
+    -->
+    <!--使用一个类名为dropdown或者btn-group的div包裹整个下拉框，默认向下dropdown，向上弹起dropup-->
+    <div class="dropdown">
+        <!--使用button作为副菜单，使用类名：dropdown-toggle和自定义data-toggle属性-->
+        <button class="btn btn-default dropdown-toggle=" data-toggle="dropdown">
+            喜欢的频道
+            <!--设置下拉箭头-->
+            <span class="caret"></span>
+        </button>
+        <!--下拉菜单项使用一个ul列表，并且定义一个类名为dropdown-menu-->
+        <ul class="dropdown-menu">
+            <!--分组标题：li添加类名dropdown-header来实现分组的功能-->
+            <li class="dropdown-header">-科普-</li>
+            <li class="disabled"><a href="http://www.baidu.com" target="blank">人与自然</a></li>
+
+            <!--分组分割线：li添加类名divider来实现添加下拉分割线的功能-->
+            <li class="divider"></li>
+
+            <li class="dropdown-header">-搞笑-</li>
+            <li class="active"><a href="http://www.cisco.com" target="blank">德云社</a></li>
+        </ul>
+    </div>
+
+    
+    <!--如果要使用Bootstrap的js插件，必须先调入jQuery-->
+    <script src="js/jquery-1.12.4.js"></script>
+    <!--包括所有Bootstrap的js插件或者可以根据需求使用的js插件调用-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
